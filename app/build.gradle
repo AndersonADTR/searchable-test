@@ -1,0 +1,82 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.test.anderson.searchable"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    dataBinding {
+        enabled true
+    }
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    implementation "androidx.core:core-ktx:$ktxVersion"
+    implementation "androidx.appcompat:appcompat:$appcompatVersion"
+
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
+    implementation "androidx.recyclerview:recyclerview:$recyclerViewVersion"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$swiperefreshlayoutVersion"
+    implementation "androidx.cardview:cardview:$cardViewVersion"
+    implementation "com.google.android.material:material:$materialVersion"
+
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+
+    //Koin - Dependency Injection
+    implementation "org.koin:koin-core:$koinVersion"
+    implementation "org.koin:koin-androidx-scope:$koinVersion"
+    implementation "org.koin:koin-androidx-viewmodel:$koinVersion"
+    implementation "org.koin:koin-androidx-fragment:$koinVersion"
+
+    //Retrofit - Network
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$httpInterceptorVersion"
+    implementation "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$coroutinesAdapterVersion"
+
+    //Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesCoreVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesAndroidVersion"
+
+    //Groupie
+    implementation "com.xwray:groupie:$groupieVersion"
+    implementation "com.xwray:groupie-kotlin-android-extensions:$groupieVersion"
+
+    //Toast
+    implementation "com.fxn769:cue:$toastCueVersion"
+
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}

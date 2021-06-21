@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Searchable Test</string>
+
+    <string name="action_search">Buscar</string>
+    <string name="action_clear">Limpiar historial de búsqueda</string>
+    <string name="are_you_sure_clear">¿Deseas borrar el historial de búsqueda?</string>
+    <string name="init_search">Realiza una búsqueda</string>
+    <string name="freq">Frecuencia:</string>
+    <string name="yes">Si</string>
+    <string name="no">No</string>
+
+</resources>
