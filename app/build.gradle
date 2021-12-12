@@ -19,21 +19,6 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    productFlavors {
-        dev {
-            applicationIdSuffix ".dev"
-            buildConfigField "String", "BASE_URL", '"https://api-nki-dev.technoapes.io/"'
-        }
-        staging {
-            applicationIdSuffix ".staging"
-            buildConfigField "String", "BASE_URL", '"https://api-nki-staging.technoapes.io/"'
-        }
-        prod {
-            applicationIdSuffix ".prod"
-            buildConfigField "String", "BASE_URL", '"https://api-nki-prod.technoapes.io/"'
-        }
-    }
-
     buildTypes {
         release {
             minifyEnabled false
