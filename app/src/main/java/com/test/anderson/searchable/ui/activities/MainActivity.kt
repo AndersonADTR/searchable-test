@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.provider.SearchRecentSuggestions
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AlertDialog
@@ -44,6 +45,7 @@ class MainActivity : BaseActivity() {
 
         handleIntent(intent)
         initView()
+        Log.d("TEST", "JHON ME LA PELA")
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
