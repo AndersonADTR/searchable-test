@@ -80,3 +80,19 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }
+
+task getDebugAppInDesktopFolder(dependsOn: 'assembleDebug') {
+    doLast{
+        def destination = "C:\\Users\\Usuario\\Desktop"
+        def desiredName = "my-given-name.apk"
+        ext.apk = file("build/outputs/apk/debug/app-debug.apk")
+
+        if (ext.apk.exists()) {
+            copy {
+                from ext.apk.absolutePath
+                into destination
+                rename { desiredName }
+            }
+        }
+    }
+}
