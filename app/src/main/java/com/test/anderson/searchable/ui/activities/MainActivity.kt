@@ -45,7 +45,6 @@ class MainActivity : BaseActivity() {
 
         handleIntent(intent)
         initView()
-        Log.d("TEST", "JHON ME LA PELA")
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
